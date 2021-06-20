@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+
+canvas {border:9px solid black ; background-color: cyan;}
+</style>
+<h1>The canvas element</h1>
+
+<canvas id="myCanvas">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "orange";
+ctx.fillRect(20, 20, 85, 50);
+
+//Turn transparency on
+ctx.globalAlpha = 0.9;
+ctx.fillStyle = "purple"; 
+ctx.fillRect(50, 50, 85, 50); 
+ctx.fillStyle = "yellow"; 
+ctx.fillRect(80, 80, 85, 50);
+</script>
+
+</body>
+</html>
